@@ -33,5 +33,80 @@ namespace InventarioTienda
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            dtgvIngreso.DataSource = productos.listProductos;
+        }
+        public bool Comprobar()
+        {
+            bool aux = false;
+            if (mtxtCantidad.Text != "" && txtNombreP.Text != "" )
+            {
+                if (rtbnAbastos.Checked || rtbntBebidas.Checked || rtbnEmbutidos.Checked || rtbnFrutas.Checked || rtbnAseo.Checked || rtbnLacteos.Checked )
+                {
+                    if (chBodeguero.Checked || chDespachador.Checked)
+                    {
+                        aux = true;
+                    }
+                }
+            }
+            return aux;
+
+        }
+        public string Personal()
+        {
+            {
+                string nomPersonal = "";
+                if (rtbnAbastos.Checked)
+                    nomPersonal = rtbnAbastos.Text;
+                if (rtbntBebidas.Checked)
+                    nomPersonal = rtbntBebidas.Text;
+                if (rtbnEmbutidos.Checked)
+                    nomPersonal = rtbnEmbutidos.Text;
+                return nomPersonal ;
+            }
+        }
+
+        private void btnPS_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (Comprobar())
+                {
+                    string mensaje = " ";
+                    frmProductoIngresado productoin = new frmProductoIngresado();
+                    productoin.Show();
+                    this.Hide();
+                    if (chBodeguero.Checked)
+                    {
+                        productoin.lblPersonal.Text = chBodeguero.Text; 
+                    }
+                    else
+                    {
+                        productoin.lblPersonal.Text = chDespachador.Text; 
+                    }
+                    if (chBodeguero .Checked)
+                    { 
+                        mensaje = "Bodeguero";
+                    }
+                    else
+                    {
+                        mensaje = "Despachador";
+                    }
+                    productoin.lblSeccion.Text = mensaje;
+                    /*productoin.Text = "Pedido de distribuidor " + Personal();*/
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese toda la información");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

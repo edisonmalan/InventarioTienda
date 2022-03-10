@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace InventarioTienda
 {
-    public partial class Form2 : Form
+    public partial class frmProductoIngresado : Form
     {
-        public Form2()
+        public frmProductoIngresado()
         {
             InitializeComponent();
         }
+
+        private void frmProductoIngresado_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
