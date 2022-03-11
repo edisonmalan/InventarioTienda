@@ -10,24 +10,22 @@ using System.Windows.Forms;
 
 namespace InventarioTienda
 {
-    public partial class frmProductoIngresado : Form
+    public partial class Ingreso : Form
     {
-        public frmProductoIngresado()
+        public Ingreso()
         {
             InitializeComponent();
         }
 
-        private void frmProductoIngresado_Load(object sender, EventArgs e)
+        private void btnIngreso_Click(object sender, EventArgs e)
         {
-
+            Form1 ingresoform1 = new Form1();
+            ingresoform1.Show();
+            ingresoform1.lblUsuario.Text = txtUsuario.Text;
+            ingresoform1.lblCedula.Text = txtCedula.Text;
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void hora2_Tick(object sender, EventArgs e)
+        private void hora_Tick(object sender, EventArgs e)
         {
             lblTiempo.Text = DateTime.Now.ToLongTimeString();
         }
