@@ -22,8 +22,8 @@ namespace InventarioTienda
             try
             {
                 IngresoProducto  ingproducto = new IngresoProducto ();
-                ingproducto.NombreProductoIn = txtNombreP.Text;
-                ingproducto.CantidadIn = Convert.ToInt32(mtxtCantidad.Text);
+                ingproducto.Nombre = txtNombreP.Text;
+                ingproducto.Cantidad = Convert.ToInt32(mtxtCantidad.Text);
                 productos.AgregarProductos(ingproducto);
                 MessageBox.Show("Datos almacenados correctamente!!!");
 
@@ -43,7 +43,7 @@ namespace InventarioTienda
             bool aux = false;
             if (mtxtCantidad.Text != "" && txtNombreP.Text != "" )
             {
-                if (rtbnAbastos.Checked || rtbntBebidas.Checked || rtbnEmbutidos.Checked || rtbnFrutas.Checked || rtbnAseo.Checked || rtbnLacteos.Checked )
+                if (rtbnPrincipal.Checked || rtbnSecundaria.Checked )
                 {
                     if (chBodeguero.Checked || chDespachador.Checked)
                     {
@@ -54,50 +54,37 @@ namespace InventarioTienda
             return aux;
 
         }
-        public string Personal()
-        {
-            {
-                string nomPersonal = "";
-                if (rtbnAbastos.Checked)
-                    nomPersonal = rtbnAbastos.Text;
-                if (rtbntBebidas.Checked)
-                    nomPersonal = rtbntBebidas.Text;
-                if (rtbnEmbutidos.Checked)
-                    nomPersonal = rtbnEmbutidos.Text;
-                return nomPersonal ;
-            }
-        }
-
         private void btnPS_Click(object sender, EventArgs e)
-        {
+       {
             try
             {
 
+
                 if (Comprobar())
                 {
-                    string mensaje = " ";
                     frmProductoIngresado productoin = new frmProductoIngresado();
                     productoin.Show();
                     this.Hide();
+                    if (rtbnPrincipal.Checked)
+                    {
+                        productoin.lblSecc.Text = rtbnPrincipal.Text;               
+                    }
+                    else
+                    {
+                            productoin.lblSecc.Text = rtbnSecundaria.Text;
+                    }
                     if (chBodeguero.Checked)
                     {
-                        productoin.lblPersonal.Text = chBodeguero.Text; 
+                        productoin.lblPersonal.Text = chBodeguero.Text;
+                       
                     }
                     else
                     {
-                        productoin.lblPersonal.Text = chDespachador.Text; 
+                        productoin.lblPersonal.Text = chDespachador.Text;
+                        
                     }
-                    if (chBodeguero .Checked)
-                    { 
-                        mensaje = "Bodeguero";
-                    }
-                    else
-                    {
-                        mensaje = "Despachador";
-                    }
-                    productoin.lblSeccion.Text = mensaje;
-                    /*productoin.Text = "Pedido de distribuidor " + Personal();*/
                 }
+
                 else
                 {
                     MessageBox.Show("Ingrese toda la información");
@@ -107,6 +94,7 @@ namespace InventarioTienda
             {
                 MessageBox.Show(ex.Message);
             }
+            
         }
     }
 }

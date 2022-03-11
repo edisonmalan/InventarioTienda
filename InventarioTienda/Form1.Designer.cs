@@ -36,19 +36,15 @@ namespace InventarioTienda
             this.label6 = new System.Windows.Forms.Label();
             this.txtNombreP = new System.Windows.Forms.TextBox();
             this.mtxtCantidad = new System.Windows.Forms.MaskedTextBox();
-            this.rtbnAbastos = new System.Windows.Forms.RadioButton();
-            this.rtbntBebidas = new System.Windows.Forms.RadioButton();
-            this.rtbnEmbutidos = new System.Windows.Forms.RadioButton();
-            this.rtbnFrutas = new System.Windows.Forms.RadioButton();
-            this.rtbnAseo = new System.Windows.Forms.RadioButton();
-            this.rtbnLacteos = new System.Windows.Forms.RadioButton();
+            this.rtbnPrincipal = new System.Windows.Forms.RadioButton();
+            this.rtbnSecundaria = new System.Windows.Forms.RadioButton();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.chBodeguero = new System.Windows.Forms.CheckBox();
             this.chDespachador = new System.Windows.Forms.CheckBox();
             this.dtgvIngreso = new System.Windows.Forms.DataGridView();
-            this.btnPS = new System.Windows.Forms.Button();
+            this.btnPs = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvIngreso)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,71 +109,27 @@ namespace InventarioTienda
             this.mtxtCantidad.TabIndex = 12;
             this.mtxtCantidad.ValidatingType = typeof(int);
             // 
-            // rtbnAbastos
+            // rtbnPrincipal
             // 
-            this.rtbnAbastos.AutoSize = true;
-            this.rtbnAbastos.Location = new System.Drawing.Point(134, 185);
-            this.rtbnAbastos.Name = "rtbnAbastos";
-            this.rtbnAbastos.Size = new System.Drawing.Size(63, 17);
-            this.rtbnAbastos.TabIndex = 15;
-            this.rtbnAbastos.TabStop = true;
-            this.rtbnAbastos.Text = "Abastos";
-            this.rtbnAbastos.UseVisualStyleBackColor = true;
+            this.rtbnPrincipal.AutoSize = true;
+            this.rtbnPrincipal.Location = new System.Drawing.Point(134, 185);
+            this.rtbnPrincipal.Name = "rtbnPrincipal";
+            this.rtbnPrincipal.Size = new System.Drawing.Size(65, 17);
+            this.rtbnPrincipal.TabIndex = 15;
+            this.rtbnPrincipal.TabStop = true;
+            this.rtbnPrincipal.Text = "Principal";
+            this.rtbnPrincipal.UseVisualStyleBackColor = true;
             // 
-            // rtbntBebidas
+            // rtbnSecundaria
             // 
-            this.rtbntBebidas.AutoSize = true;
-            this.rtbntBebidas.Location = new System.Drawing.Point(215, 185);
-            this.rtbntBebidas.Name = "rtbntBebidas";
-            this.rtbntBebidas.Size = new System.Drawing.Size(63, 17);
-            this.rtbntBebidas.TabIndex = 16;
-            this.rtbntBebidas.TabStop = true;
-            this.rtbntBebidas.Text = "Bebidas";
-            this.rtbntBebidas.UseVisualStyleBackColor = true;
-            // 
-            // rtbnEmbutidos
-            // 
-            this.rtbnEmbutidos.AutoSize = true;
-            this.rtbnEmbutidos.Location = new System.Drawing.Point(316, 185);
-            this.rtbnEmbutidos.Name = "rtbnEmbutidos";
-            this.rtbnEmbutidos.Size = new System.Drawing.Size(74, 17);
-            this.rtbnEmbutidos.TabIndex = 17;
-            this.rtbnEmbutidos.TabStop = true;
-            this.rtbnEmbutidos.Text = "Embutidos";
-            this.rtbnEmbutidos.UseVisualStyleBackColor = true;
-            // 
-            // rtbnFrutas
-            // 
-            this.rtbnFrutas.AutoSize = true;
-            this.rtbnFrutas.Location = new System.Drawing.Point(407, 185);
-            this.rtbnFrutas.Name = "rtbnFrutas";
-            this.rtbnFrutas.Size = new System.Drawing.Size(54, 17);
-            this.rtbnFrutas.TabIndex = 18;
-            this.rtbnFrutas.TabStop = true;
-            this.rtbnFrutas.Text = "Frutas";
-            this.rtbnFrutas.UseVisualStyleBackColor = true;
-            // 
-            // rtbnAseo
-            // 
-            this.rtbnAseo.AutoSize = true;
-            this.rtbnAseo.Location = new System.Drawing.Point(498, 185);
-            this.rtbnAseo.Name = "rtbnAseo";
-            this.rtbnAseo.Size = new System.Drawing.Size(49, 17);
-            this.rtbnAseo.TabIndex = 19;
-            this.rtbnAseo.TabStop = true;
-            this.rtbnAseo.Text = "Aseo";
-            this.rtbnAseo.UseVisualStyleBackColor = true;
-            // 
-            // rtbnLacteos
-            // 
-            this.rtbnLacteos.AutoSize = true;
-            this.rtbnLacteos.Location = new System.Drawing.Point(589, 185);
-            this.rtbnLacteos.Name = "rtbnLacteos";
-            this.rtbnLacteos.Size = new System.Drawing.Size(63, 17);
-            this.rtbnLacteos.TabIndex = 24;
-            this.rtbnLacteos.TabStop = true;
-            this.rtbnLacteos.Text = "Lacteos";
-            this.rtbnLacteos.UseVisualStyleBackColor = true;
+            this.rtbnSecundaria.AutoSize = true;
+            this.rtbnSecundaria.Location = new System.Drawing.Point(215, 185);
+            this.rtbnSecundaria.Name = "rtbnSecundaria";
+            this.rtbnSecundaria.Size = new System.Drawing.Size(79, 17);
+            this.rtbnSecundaria.TabIndex = 16;
+            this.rtbnSecundaria.TabStop = true;
+            this.rtbnSecundaria.Text = "Secundaria";
+            this.rtbnSecundaria.UseVisualStyleBackColor = true;
             // 
             // btnGuardar
             // 
@@ -231,39 +183,35 @@ namespace InventarioTienda
             // dtgvIngreso
             // 
             this.dtgvIngreso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvIngreso.Location = new System.Drawing.Point(157, 208);
+            this.dtgvIngreso.Location = new System.Drawing.Point(190, 217);
             this.dtgvIngreso.Name = "dtgvIngreso";
-            this.dtgvIngreso.Size = new System.Drawing.Size(233, 116);
+            this.dtgvIngreso.Size = new System.Drawing.Size(205, 116);
             this.dtgvIngreso.TabIndex = 35;
             // 
-            // btnPS
+            // btnPs
             // 
-            this.btnPS.Location = new System.Drawing.Point(567, 100);
-            this.btnPS.Name = "btnPS";
-            this.btnPS.Size = new System.Drawing.Size(75, 40);
-            this.btnPS.TabIndex = 36;
-            this.btnPS.Text = "PERSONAL Y SECCION";
-            this.btnPS.UseVisualStyleBackColor = true;
-            this.btnPS.Click += new System.EventHandler(this.btnPS_Click);
+            this.btnPs.Location = new System.Drawing.Point(566, 100);
+            this.btnPs.Name = "btnPs";
+            this.btnPs.Size = new System.Drawing.Size(91, 40);
+            this.btnPs.TabIndex = 36;
+            this.btnPs.Text = "CONTINUAR";
+            this.btnPs.UseVisualStyleBackColor = true;
+            this.btnPs.Click += new System.EventHandler(this.btnPS_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 345);
-            this.Controls.Add(this.btnPS);
+            this.Controls.Add(this.btnPs);
             this.Controls.Add(this.dtgvIngreso);
             this.Controls.Add(this.chDespachador);
             this.Controls.Add(this.chBodeguero);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.rtbnLacteos);
-            this.Controls.Add(this.rtbnAseo);
-            this.Controls.Add(this.rtbnFrutas);
-            this.Controls.Add(this.rtbnEmbutidos);
-            this.Controls.Add(this.rtbntBebidas);
-            this.Controls.Add(this.rtbnAbastos);
+            this.Controls.Add(this.rtbnSecundaria);
+            this.Controls.Add(this.rtbnPrincipal);
             this.Controls.Add(this.mtxtCantidad);
             this.Controls.Add(this.txtNombreP);
             this.Controls.Add(this.label6);
@@ -288,19 +236,15 @@ namespace InventarioTienda
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNombreP;
         private System.Windows.Forms.MaskedTextBox mtxtCantidad;
-        private System.Windows.Forms.RadioButton rtbnAbastos;
-        private System.Windows.Forms.RadioButton rtbntBebidas;
-        private System.Windows.Forms.RadioButton rtbnEmbutidos;
-        private System.Windows.Forms.RadioButton rtbnFrutas;
-        private System.Windows.Forms.RadioButton rtbnAseo;
-        private System.Windows.Forms.RadioButton rtbnLacteos;
+        private System.Windows.Forms.RadioButton rtbnPrincipal;
+        private System.Windows.Forms.RadioButton rtbnSecundaria;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.CheckBox chBodeguero;
         private System.Windows.Forms.CheckBox chDespachador;
         private System.Windows.Forms.DataGridView dtgvIngreso;
-        private System.Windows.Forms.Button btnPS;
+        private System.Windows.Forms.Button btnPs;
     }
 }
 

@@ -8,16 +8,16 @@ namespace InventarioTienda
 {
    public  class IngresoProducto
     {
-        public string NombreProductoIn { set; get; }
-        public int CantidadIn { set; get; }
+        public string Nombre { set; get; }
+        public int Cantidad { set; get; }
         public IngresoProducto ()
         {
         }
 
         public IngresoProducto(string nombreProductoIn, int cantidadIn)
         {
-            NombreProductoIn = nombreProductoIn;
-            CantidadIn = cantidadIn;
+            Nombre = nombreProductoIn;
+            Cantidad = cantidadIn;
         }
     }
 }
