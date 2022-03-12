@@ -29,8 +29,9 @@ namespace InventarioTienda
 
             }
             catch (Exception ex)
+
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("INGRESE TODOS LOS DATOS REQUERIDOS",ex.Message);
             }
         }
 
