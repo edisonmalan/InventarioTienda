@@ -230,7 +230,7 @@ namespace InventarioTienda
             this.dtgvIngreso.EnableHeadersVisualStyles = false;
             this.dtgvIngreso.Location = new System.Drawing.Point(193, 236);
             this.dtgvIngreso.Name = "dtgvIngreso";
-            this.dtgvIngreso.Size = new System.Drawing.Size(231, 148);
+            this.dtgvIngreso.Size = new System.Drawing.Size(252, 148);
             this.dtgvIngreso.TabIndex = 35;
             // 
             // btnPs
