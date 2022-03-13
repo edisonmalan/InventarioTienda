@@ -19,5 +19,6 @@ namespace InventarioTienda
             Nombre = nombreProductoIn;
             Cantidad = cantidadIn;
         }
+        
     }
 }

@@ -228,9 +228,9 @@ namespace InventarioTienda
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgvIngreso.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvIngreso.EnableHeadersVisualStyles = false;
-            this.dtgvIngreso.Location = new System.Drawing.Point(193, 236);
+            this.dtgvIngreso.Location = new System.Drawing.Point(147, 248);
             this.dtgvIngreso.Name = "dtgvIngreso";
-            this.dtgvIngreso.Size = new System.Drawing.Size(252, 148);
+            this.dtgvIngreso.Size = new System.Drawing.Size(283, 136);
             this.dtgvIngreso.TabIndex = 35;
             // 
             // btnPs
